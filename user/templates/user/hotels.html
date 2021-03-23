@@ -1,0 +1,28 @@
+{% extends 'app1/base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="{% static 'app1/hotel.css'%}">
+<div class="sign-up-form">
+    <img src="{%static 'app1/images/hotel icon.jpg' %}" alt="icon">
+     <h1>Enter Hotel Information</h1>
+     <form action=>
+        <input type="text" class="input-box" placeholder="Hotel name">
+        <input type="text" class="input-box" placeholder="Phone Number">
+         <input type="email" class="input-box" placeholder="Hotel email">
+         
+         <h2>Descibe About Hotel</h2>
+         <textarea rows = "10" cols = "60" name = "description">
+       
+    </textarea>
+         <h2>rooms </h2>
+         <p><span> <input type="checkbox"></span>available</p>
+         <p><span> <input type="checkbox"></span>not available</p>
+         <button type="button" class="signup-btn">Update</button>
+     </form>
+      
+  </div>
+{% endblock content %}
+
+
+

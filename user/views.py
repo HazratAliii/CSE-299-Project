@@ -31,3 +31,15 @@ def register_sub(request):
 def profile(request):
     return render(request, "user/profile.html", {})
 
+def login(request):
+    return render(request, 'user/login.html', {})
+
+def login_sub(request):
+    pass
+
+def hotels(request):
+    return render(request, 'user/hotels.html')
+
+def hotel_info(requst):
+    pass 
+    

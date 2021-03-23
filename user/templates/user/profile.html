@@ -1,42 +1,52 @@
 {% extends 'app1/base.html' %}
 {% load static %}
+
 {% block content %}
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{% static 'app1/profile.css' %}">
-        <title>Document</title>
-    </head>
-    <body>
-        <div class="dp">
-            <img src= "{% static 'app1/images/DP.jpg' %}" alt="Profile picture">
-            <h3> User </h3>
+<link rel="stylesheet" href="{% static 'app1/profile.css' %}">
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+<div class="wrapper">
+    <div class="left">
+        <img src="https://i.imgur.com/cMy8V5j.png" 
+        alt="user" width="100">
+        <h4>Alex William</h4>
+         <p>UI Developer</p>
+    </div>
+    <div class="right">
+        <div class="info">
+            <h3>Information</h3>
+            <div class="info_data">
+                 <div class="data">
+                    <h4>Email</h4>
+                    <p>alex@gmail.com</p>
+                 </div>
+                 <div class="data">
+                   <h4>Phone</h4>
+                    <p>0001-213-998761</p>
+              </div>
+            </div>
         </div>
-        <div class="tab">
-            <table>
-                <tr>
-                    <td>Email</td>
-                    <td>demo@gmail.com</td>
-                </tr>
-                <td>phone </td>
-                <td>01784383344</td>
-                <tr>
-                    <td>Position</td>
-                    <td>Tourist</td>
-                </tr>
-                <tr>
-                    <td>experiece</td>
-                    <td>2years</td>
-                </tr>
-                <tr>
-                    <td>rating</td>
-                    <td>8</td>
-                </tr>
-            </table>
-        </div>       
-    </body>
-    </html>
+      
+      <div class="projects">
+            <h3>Projects</h3>
+            <div class="projects_data">
+                 <div class="data">
+                    <h4>Recent</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                 </div>
+                 <div class="data">
+                   <h4>Most Viewed</h4>
+                    <p>dolor sit amet.</p>
+              </div>
+            </div>
+        </div>
+      
+        <div class="social_media">
+            <ul>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+      </div>
+    </div>
+</div>
 {% endblock content %}
