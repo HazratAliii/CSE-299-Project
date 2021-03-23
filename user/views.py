@@ -23,8 +23,8 @@ def register_sub(request):
     email = request.POST['email']
     phone = request.POST['phone']
     password = request.POST['password']
-    rating = request.POST['rating']
-    guides = Guides(name = name, email = email, phone = phone, password = password, rating = rating)
+    password2 = request.POST['password2']
+    guides = Guides(name = name, email = email, phone = phone, password = password, password2 = password2)
     guides.save()
     return render(request, 'app1/home.html', {})
 
