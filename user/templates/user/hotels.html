@@ -6,10 +6,11 @@
 <div class="sign-up-form">
     <img src="{%static 'app1/images/hotel icon.jpg' %}" alt="icon">
      <h1>Enter Hotel Information</h1>
-     <form action=>
-        <input type="text" class="input-box" placeholder="Hotel name">
-        <input type="text" class="input-box" placeholder="Phone Number">
-         <input type="email" class="input-box" placeholder="Hotel email">
+     <form action="{% url 'user-hotels_info' %}" method="POST">
+       {% csrf_token %}
+        <input type="text" name = "name" class="input-box" placeholder="Hotel name">
+        <input type="text" name = phone class="input-box" placeholder="Phone Number">
+         <input type="email" name = "email" class="input-box" placeholder="Hotel email">
          
          <h2>Descibe About Hotel</h2>
          <textarea rows = "10" cols = "60" name = "description">
@@ -18,7 +19,7 @@
          <h2>rooms </h2>
          <p><span> <input type="checkbox"></span>available</p>
          <p><span> <input type="checkbox"></span>not available</p>
-         <button type="button" class="signup-btn">Update</button>
+         <button type="submit" class="signup-btn">Update</button>
      </form>
       
   </div>

@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .forms import tourist_DB
-from .models import Guides
+from .models import Guides, Hotels
 # Create your views here.
 def tregister(request):
     # if request.method == 'POST':
@@ -35,11 +35,27 @@ def login(request):
     return render(request, 'user/login.html', {})
 
 def login_sub(request):
-    pass
+    if request == "POST":
+        pass 
+    else:
+        return render(request, 'user/profile.html', {})
 
 def hotels(request):
     return render(request, 'user/hotels.html')
 
-def hotel_info(requst):
-    pass 
+def hotel_info_sub(request):
+
+    name = request.POST['name']
+    email = request.POST['email']
+    phone = request.POST['phone']
+    description = request.POST['description']
+    available = request.POST['available']
+    print(name)
+    print(email)
+    print(phone)
+    print(description)
+    print(available)
+    hotels = Hotels(name = name, email = email, phone = phone, description = description, available = available)
+    hotels.save()
+    return render(request, 'app1/home.html')
     
