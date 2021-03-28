@@ -35,8 +35,8 @@ def login(request):
     return render(request, 'user/login.html', {})
 
 def login_sub(request):
-    if request == "POST":
-        pass 
+    if request.Method == "POST":
+        return render(request, "user/home.html", {})
     else:
         return render(request, 'user/profile.html', {})
 
@@ -50,12 +50,16 @@ def hotel_info_sub(request):
     phone = request.POST['phone']
     description = request.POST['description']
     available = request.POST['available']
-    print(name)
-    print(email)
-    print(phone)
-    print(description)
-    print(available)
+    # print(name)
+    # print(email)
+    # print(phone)
+    # print(description)
+    # print(available)
     hotels = Hotels(name = name, email = email, phone = phone, description = description, available = available)
     hotels.save()
     return render(request, 'app1/home.html')
+
+def hotel_page(request):
+
+    return render(request, 'user/hotelP.html', {})
     
