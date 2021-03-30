@@ -63,3 +63,5 @@ def hotel_page(request):
 
     return render(request, 'user/hotelP.html', {})
     
+def about_us(request):
+    return render(request, 'user/about_us.html', {})

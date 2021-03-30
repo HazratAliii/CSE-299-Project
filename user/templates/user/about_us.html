@@ -1,0 +1,58 @@
+{% extends 'app1/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'app1/hotelp.css' %}">
+<link rel="stylesheet" media="screen and (max-width:768px)" href="{% static 'app1/about_us.css' %}">
+<!-- <header>
+    <nav id="navbar">
+        <div class="container">
+            <h1 class="logo">
+                <a href="index.html">HBT</a>
+            </h1>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a class="current" href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header> -->
+<section id="about-info" class="bg-light py-3">
+    <div class="container">
+        <div class="info-left">
+            <h1 class="l-heading"><span class="text-primary">About</span> Hotel BT</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor eos a officiis eum et, nihil maxime id alias, sequi voluptatem, hic illo rem. Non aliquid laborum impedit similique, sed numquam!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi cum error officiis quae earum fugiat soluta saepe quibusdam blanditiis eveniet.</p>
+        </div>
+        <div class="info-right">
+            <img src="{% static 'app1/images/photo-2.jpg' %}" alt="hotel">
+        </div>
+    </div>
+</section>
+<div class="clr"></div>
+<section id="testimonials" class="py-3">
+    <div class="container">
+        <h2 class="l-heading">What Our Guests Say</h2>
+        <div class="testimonial bg-primary">
+            <img src="{% static 'app1/images/person-1.jpg' %}" alt="person">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptates error laudantium iste hic vero fuga ullam neque. Corrupti vero totam voluptas quidem? Enim, et! Cum recusandae neque dolor tempora.</p>
+        </div>
+        <div class="testimonial bg-primary">
+            <img src="{% static 'app1/images/person-2.jpg' %}" alt="person">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas voluptates error laudantium iste hic vero fuga ullam neque. Corrupti vero totam voluptas quidem? Enim, et! Cum recusandae neque dolor tempora.</p>
+        </div>
+    </div>
+</section>
+<footer class="main-footer">
+    <p>Hotel BT &copy; All Rights Reserved</p>
+</footer>
+  
+{% endblock content %}
