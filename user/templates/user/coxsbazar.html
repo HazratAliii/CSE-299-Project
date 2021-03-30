@@ -1,0 +1,9 @@
+{% for i in hotel %}
+    
+    {% if i.big_city_name == "Cox’s Bazar" %}
+        <form action="{%url 'user-coxsbazar_sub'%}">
+            <a href="{% url 'user-hotel_page' %}"> {{i.name}} </a> <br>
+        </form>
+    {% endif %}
+        
+{% endfor %}

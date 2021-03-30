@@ -2,9 +2,11 @@ from django.urls import path
 from . import views   
 
 urlpatterns = [
+   
     path("", views.tregister, name="user-register"),
     path("profile/", views.profile, name="user-profile"),
     path("register/", views.register_sub, name="register-sub"),
+    path("tourist_register_sub/", views.tourist_register_sub, name="tourist-register-sub"),
     path("login/", views.login, name="user-login"),
     path("login_sub/", views.login_sub, name="user-login_sub"),
     path("hotels/", views.hotels, name="user-hotels"),
@@ -12,4 +14,16 @@ urlpatterns = [
     path("hotel_page/", views.hotel_page, name="user-hotel_page"),
     path("about_us/", views.about_us, name="user-about_us"),
     path("hotel_list/", views.hotel_list, name="user-hotel_list"),
+    path("tourist_login/", views.tourist_login, name="user-tourist_login"),
+    path("guide_login/", views.guide_login, name="user-guide_login"),
+    path("tourist_signup/", views.tourist_signup, name="user-tourist_signup"),
+    path("guide_signup/", views.guide_signup, name="user-guide_signup"),
+    path("rangamati/", views.rangamati, name="user-rangamati"),
+    path("kuakata/", views.kuakata, name="user-kuakata"),
+    path("sundarban/", views.sundarban, name="user-sundarban"),
+    path("coxsbazar/", views.coxsbazar, name="user-coxsbazar"),
+    path("rangamati_sub/", views.rangamati_sub, name="user-rangamati_sub"),
+    path("kuakata_sub/", views.kuakata_sub, name="user-kuakata_sub"),
+    path("sundarban_sub/", views.sundarban_sub, name="user-sundarban_sub"),
+    path("coxsbazar_sub/", views.coxsbazar_sub, name="user-coxsbazar_sub"),
 ]

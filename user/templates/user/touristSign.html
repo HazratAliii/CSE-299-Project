@@ -1,0 +1,27 @@
+{% extends "app1/base.html" %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'app1/register.css' %}">
+<div class="sign-up-form">
+    <img src ="{% static 'app1/images/user icon.png' %}">
+     <h1>Sign Up Now</h1>
+     <form action= "{% url 'tourist-register-sub' %}" method="POST">
+         {% csrf_token %}
+         <input type="text" class="input-box" name = "name" placeholder="Enter name">
+         <input type="email" class="input-box" name = "email" placeholder="Enter Email">
+         <input type="text" class="input-box" name = "phone" placeholder="Phone number">
+         <input type="password" class="input-box" name = "password" placeholder="Password">
+         <input type="password" class="input-box" name = "password2" placeholder="confirm Password">
+         <p><span> <input type="checkbox"></span>i agree to the terms and services</p>
+         <button type="submit" class="signup-btn">sign up</button>
+         <!-- <button type="submit"> login</button> -->
+         <hr>
+         <p class="or">Or
+         </p>
+         <button type="button" class="login-btn">login with twitter</button>
+         <p>do u have another account? <a href="{url 'app1-home'}">Log in</a></p>
+         
+     </form>
+      
+  </div>
+{% endblock content %}

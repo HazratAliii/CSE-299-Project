@@ -24,5 +24,15 @@ class Hotels(models.Model):
     def __str__(self):
         return self.big_city_name 
 
+class Tourists(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    phone = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+    password2 = models.CharField(max_length=100)
+
+    def __str__(self):
+        return self.name
+
 
 
