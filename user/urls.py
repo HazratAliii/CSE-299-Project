@@ -11,4 +11,5 @@ urlpatterns = [
     path("hotel_info_sub/", views.hotel_info_sub, name="user-hotels_info"),
     path("hotel_page/", views.hotel_page, name="user-hotel_page"),
     path("about_us/", views.about_us, name="user-about_us"),
+    path("hotel_list/", views.hotel_list, name="user-hotel_list"),
 ]

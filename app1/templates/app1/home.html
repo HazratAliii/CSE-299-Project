@@ -4,36 +4,52 @@
 <link rel="stylesheet" href="{% static 'app1/Mainpage.css' %}">
 <div class="menu-bar">
     <ul>
-       <li class="active"><a><i class="fas fa-home"></i>Home</a>
-       <div class="sub-menu-1">
+       <li class="active"><a href = "#"><i class="fas fa-home"></i>Home</a>
+       <!-- <div class="sub-menu-1">
             <ul>
                 <li><a href=""><i class="fas fa-search-plus"></i>Search</a></li>
                 <li><a href=""><i class="fas fa-money-check-alt"></i>Offers</a></li>
                 <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li>
             </ul>
-        </div>
+        </div> -->
        </li>
-        <li ><a href="{% url 'user-register'%}"><i class="fas fa-user-plus"></i>Sign up</a></li>
+        <li ><a href="{% url 'user-register'%}"><i class="fas fa-user-plus"></i>Sign up</a>
+            <div class="sub-menu-1">
+                <ul>
+                    <li><a href=""><i class="fas fa-search-plus"></i>Tourist</a></li>
+                    <li><a href=""><i class="fas fa-money-check-alt"></i>Guide</a></li>
+                    <!-- <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li> -->
+                </ul>
+            </div>
+        </li>
         
-        <li><a href="{% url 'user-login' %}"><i class="fas fa-sign-in-alt"></i>Log in</a></li>
-        <li><a><i class="fas fa-location-arrow"></i>Places</a></li>
-        <li><a><i class="fas fa-book"></i>Know us</a>
-        <div class="sub-menu-1">
+        <li><a href="{% url 'user-login' %}"><i class="fas fa-sign-in-alt"></i>Log in</a>
+            <div class="sub-menu-1">
             <ul>
-                <li><a href=""><i class="fas fa-phone"></i>Contact</a></li>
-                <li><a href=""><i class="fas fa-mobile"></i>Mobile app</a></li>
-                <li><a href=""><i class="fas fa-bullseye"></i>Objective</a></li>
+                <li><a href=""><i class="fas fa-search-plus"></i>Tourist</a></li>
+                <li><a href=""><i class="fas fa-money-check-alt"></i>Guide</a></li>
+                <!-- <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li> -->
             </ul>
         </div>
         </li>
-        <li><a><i class="far fa-question-circle"></i>Info</a>
+        <li><a><i class="fas fa-location-arrow"></i>Places</a></li>
+        <li><a><i class="fas fa-book"></i>Know us</a>
         <div class="sub-menu-1">
-            <ul>
+            <!-- <ul>
+                <li><a href=""><i class="fas fa-phone"></i>Contact</a></li>
+                <li><a href=""><i class="fas fa-mobile"></i>Mobile app</a></li>
+                <li><a href=""><i class="fas fa-bullseye"></i>Objective</a></li>
+            </ul> -->
+        </div>
+        </li>
+        <li><a><i class="far fa-question-circle"></i>Info</a>
+        <!-- <div class="sub-menu-1">
+            <!-- <ul>
                 <li><a href=""><i class="fas fa-hotel"></i>Hotel</a></li>
                 <li><a href=""><i class="fas fa-car"></i>Transport</a></li>
                 <li><a href=""><i class="fas fa-male"></i>Guide</a></li>
-            </ul>
-        </div>
+            </ul> -->
+        </div> -->
         </li>
        
     </ul>

@@ -8,10 +8,10 @@
      <form action= "{% url 'register-sub' %}" method="POST">
          {% csrf_token %}
          <input type="text" class="input-box" name = "name" placeholder="Enter name">
-         <input type="email" class="input-box" name = "email"  placeholder="Enter Email">
+         <input type="email" class="input-box" name = "email" placeholder="Enter Email">
          <input type="text" class="input-box" name = "phone" placeholder="Phone number">
          <input type="password" class="input-box" name = "password" placeholder="Password">
-         <input type="password" class="input-box" name = "password2"placeholder="confirm Password">
+         <input type="password" class="input-box" name = "password2" placeholder="confirm Password">
          <p><span> <input type="checkbox"></span>i agree to the terms and services</p>
          <button type="submit" class="signup-btn">sign up</button>
          <!-- <button type="submit"> login</button> -->

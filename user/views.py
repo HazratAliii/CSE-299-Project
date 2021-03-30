@@ -60,8 +60,13 @@ def hotel_info_sub(request):
     return render(request, 'app1/home.html')
 
 def hotel_page(request):
-
-    return render(request, 'user/hotelP.html', {})
+    data = Hotels.objects.get(name = 'Hotel 1')
+    return render(request, 'user/hotelP.html', {'info' : data})
     
 def about_us(request):
-    return render(request, 'user/about_us.html', {})
+    data = Hotels.objects.get(big_city_name = 'Rangamati')
+    return render(request, 'user/about_us.html', {'info' : data})
+
+def hotel_list(request):
+    hotels = Hotels.objects.all()
+    return render(request, 'user/hotel_list.html', {'hotel' : hotels})
