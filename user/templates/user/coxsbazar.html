@@ -1,6 +1,12 @@
+{% load static %}
 {% for i in hotel %}
+
     {% if i.big_city_name == "Cox’s Bazar" %}
-        <a href="{% url 'user-coxsbazar_sub' i.id %}">{{i.name}}</a> <br>
+       <link rel="stylesheet" href="{%static 'app1/Hotelcard.css' %}">
+        <div class="card card1">
+               <h3><a href="{% url 'user-coxsbazar_sub' i.id %}">{{i.name}}</a></h3>
+               <p>{{i.name}} is a beautiful place</p>
+           </div>
     {% endif %}
         
 {% endfor %}

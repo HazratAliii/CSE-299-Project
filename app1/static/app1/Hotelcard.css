@@ -8,7 +8,7 @@
     box-sizing: border-box;
     cursor: pointer;
     margin: 10px 15px;
-    background-image: url(hotel.jpg);
+    background-image: url('images/Hotel.jpg');
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
