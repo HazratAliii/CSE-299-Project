@@ -63,8 +63,8 @@ p {
 }
 
 .bg-dark {
-    background: #333;
-    color: #fff;
+    background: rgb(148, 54, 54);
+    color: blueviolet;
 }
 
 .bg-light {
@@ -258,7 +258,7 @@ p {
 }
 
 #testimonials h2 {
-    color: #fff;
+    color: rgb(184, 56, 56);
     text-align: center;
     padding-bottom: 40px;
 }

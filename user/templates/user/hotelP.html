@@ -1,51 +1,54 @@
 {% extends 'app1/base.html' %}
 {% load static %}   
-{% block content %}
-<link rel="stylesheet" href="{% static 'app1/hotelp.css' %}">
-<header>
-        
-    <div id="showcase">
-        <div class="container">
-            <div class="showcase-content">
-                <h1><span class="text-primary">Enjoy</span> Your Story</h1>
-                <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum omnis non maxime blanditiis ducimus magni ab eum, provident voluptatum optio?</p>
-                
+
+
+    {% block content %}
+
+    <link rel="stylesheet" href="{% static 'app1/hotelp.css' %}">
+    <header>
+            
+        <div id="showcase">
+            <div class="container">
+                <div class="showcase-content">
+                    <h1><span class="text-primary"></span> {{data.name}}</h1>
+                    <p class="lead">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum omnis non maxime blanditiis ducimus magni ab eum, provident voluptatum optio?</p>
+                    
+                </div>
             </div>
         </div>
-    </div>
-</header>
-<section id="home-info" class="bg-dark">
-    <div class="info-img"></div>
-    <div class="info-content">
-        <h2><span class="text-primary">The History</span> Of Our Hotel</h2>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eaque corrupti sed voluptatibus id. Blanditiis assumenda vero debitis maiores, sapiente excepturi suscipit distinctio! Officiis omnis a, fuga quae inventore sit enim tempore vitae
-            earum soluta?</p>
-        <!-- <a href="about.html" class="btn btn-light">Read More</a> -->
-        <a href="{% url 'user-about_us' %}" class="btn btn-light">Read More</a>
-    </div>
-</section>
-<section id="features">
-    <div class="box bg-light">
-      <i class="fas fa-id-badge"></i>
-        <h3>About Us</h3>
-        <p><i class="fas fa-phone"></i>Contact no : </p>
-        <p><i class="fas fa-location-arrow"></i>Location : </p>
-        <p><i class="fas fa-envelope-square"></i>Email   : </p>
-        
-    </div>
-    <div class="box bg-primary">
-        <i class="fas fa-hamburger"></i>
-        <h3>Free Meals</h3>
-        <p>{{info.meals}}</p>
-    </div>
-    <div class="box bg-light">
-       <i class="fas fa-dumbbell"></i>
-        <h3>Fitness Room</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, quam.</p>
-    </div>
-</section>
-<div class="clr"></div>
-<footer class="main-footer">
-    <p>Hotel BT &copy; All Rights Reserved</p>
-</footer>
-{% endblock content %}
+    </header>
+    <section id="home-info" class="bg-dark">
+        <div class="info-img"></div>
+        <div class="info-content">
+            <h2><span class="text-primary">The History</span> Of Our Hotel</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eaque corrupti sed voluptatibus id. Blanditiis assumenda vero debitis maiores, sapiente excepturi suscipit distinctio! Officiis omnis a, fuga quae inventore sit enim tempore vitae
+                earum soluta?</p>
+            <!-- <a href="about.html" class="btn btn-light">Read More</a> -->
+            <a href="{% url 'user-about_us' %}" class="btn btn-light">Read More</a>
+        </div>
+    </section>
+    <section id="features">
+        <div class="box bg-light">
+          <i class="fas fa-id-badge"></i>
+            <h3>About Us</h3>
+            <p style = "color: black;"><i class="fas fa-phone"></i>Contact no : {{data.phone}} </p>
+            <p style = "color: black;"><i class="fas fa-location-arrow"></i>Location : {{data.location}}</p>
+            <p style = "color: black;"><i class="fas fa-envelope-square"></i>Email   : {{data.email}}</p>
+            
+        </div>
+        <div class="box bg-primary">
+            <i class="fas fa-hamburger"></i>
+            <h3>Free Meals</h3>
+            <p style = "color: black;">{{data.meals}}</p>
+        </div>
+        <div class="box bg-light">
+           <i class="fas fa-dumbbell"></i>
+            <h3>Fitness Room</h3>
+            <p style = "color: black;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda, quam.</p>
+        </div>
+    </section>
+    <div class="clr"></div>
+    <footer class="main-footer">
+        <p>Hotel BT &copy; All Rights Reserved</p>
+    </footer>
+    {% endblock content %}

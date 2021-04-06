@@ -1,7 +1,7 @@
 {% for i in hotel %}
     
     {% if i.big_city_name == 'Rangamati' %}
-    <a href="{% url 'user-hotel_page' %}"> {{i.name}} </a> <br>
+        <a href="{% url 'user-rangamati_sub' i.id %}">{{i.name}}</a> <br>
     {% endif %}
-        
+            
 {% endfor %}

@@ -22,8 +22,8 @@ urlpatterns = [
     path("kuakata/", views.kuakata, name="user-kuakata"),
     path("sundarban/", views.sundarban, name="user-sundarban"),
     path("coxsbazar/", views.coxsbazar, name="user-coxsbazar"),
-    path("rangamati_sub/", views.rangamati_sub, name="user-rangamati_sub"),
-    path("kuakata_sub/", views.kuakata_sub, name="user-kuakata_sub"),
-    path("sundarban_sub/", views.sundarban_sub, name="user-sundarban_sub"),
-    path("coxsbazar_sub/", views.coxsbazar_sub, name="user-coxsbazar_sub"),
+    path("rangamati_sub/<int:pk>", views.rangamati_sub, name="user-rangamati_sub"),
+    path("kuakata_sub/<int:pk>", views.kuakata_sub, name="user-kuakata_sub"),
+    path("sundarban_sub/<int:pk>", views.sundarban_sub, name="user-sundarban_sub"),
+    path("coxsbazar_sub/<int:pk>", views.coxsbazar_sub, name="user-coxsbazar_sub"),
 ]

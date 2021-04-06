@@ -109,22 +109,23 @@ def kuakata(request):
     data = Hotels.objects.all()
     return render(request, 'user/Kuakata.html', {'hotel' : data})
 
-def rangamati_sub(request):
-    data = Hotels.objects.all()
-    return render(request, 'user/hotelP.html', {'info' : data})
+def rangamati_sub(request, pk):
+    data = Hotels.objects.get(id = pk)
+    print("khoda", pk)
+    context = {'data': data}
+    return render(request, 'user/hotelP.html', context)
+   
+def sundarban_sub(request, pk):
+    data = Hotels.objects.get(id = pk)
+    context = {'data': data}
+    return render(request, 'user/hotelP.html', context)
 
-def rangamati_sub(request):
-    data = Hotels.objects.all()
-    return render(request, 'user/hotelP.html', {'info' : data})
+def kuakata_sub(request, pk):
+    data = Hotels.objects.get(id = pk)
+    context = {'data': data}
+    return render(request, 'user/hotelP.html', context)
 
-def sundarban_sub(request):
-    data = Hotels.objects.all()
-    return render(request, 'user/hotelP.html', {'info' : data})
-
-def kuakata_sub(request):
-    data = Hotels.objects.all()
-    return render(request, 'user/hotelP.html', {'info' : data})
-
-def coxsbazar_sub(request):
-    data = Hotels.objects.all()
-    return render(request, 'user/hotelP.html', {'info' : data})
+def coxsbazar_sub(request, pk):
+    data = Hotels.objects.get(id = pk)
+    context = {'data': data}
+    return render(request, 'user/hotelP.html', context)
