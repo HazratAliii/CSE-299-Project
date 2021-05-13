@@ -12,34 +12,19 @@
 <div class="menu-bar">
     <ul>
        <li class="active"><a href = "{% url 'app1-home' %}"><i class="fas fa-home"></i>Home</a>
-       <!-- <div class="sub-menu-1">
-            <ul>
-                <li><a href=""><i class="fas fa-search-plus"></i>Search</a></li>
-                <li><a href=""><i class="fas fa-money-check-alt"></i>Offers</a></li>
-                <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li>
-            </ul>
-        </div> -->
+    
        </li>
-        <li ><a href="%"><i class="fas fa-user-plus"></i>Sign up</a>
-            <div class="sub-menu-1">
-                <ul>
-                    <li><a href="{% url 'user-tourist_signup' %}"><i class="fas fa-search-plus"></i>Tourist</a></li>
-                    <li><a href="{% url 'user-guide_signup' %}"><i class="fas fa-money-check-alt"></i>Guide</a></li>
-                    <!-- <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li> -->
-                </ul>
-            </div>
-        </li>
         
         <li><a href="{% url 'user-login' %}"><i class="fas fa-sign-in-alt"></i>Log in</a>
             <div class="sub-menu-1">
             <ul>
-                <li><a href="{% url 'user-tourist_login' %}"><i class="fas fa-search-plus"></i>Tourist</a></li>
+                <!-- <li><a href="{% url 'user-tourist_login' %}"><i class="fas fa-search-plus"></i>Tourist</a></li> -->
                 <li><a href="{% url 'user-guide_login' %}"><i class="fas fa-money-check-alt"></i>Guide</a></li>
                 <!-- <li><a href=""><i class="fas fa-bookmark"></i>Bookings</a></li> -->
             </ul>
         </div>
         </li>
-        <li><a><i class="fas fa-location-arrow"></i>Places</a></li>
+        <li><a><i class="fas fa-location-arrow"></i>Review</a></li>
         <li><a><i class="fas fa-book"></i>Know us</a>
         <div class="sub-menu-1">
             <!-- <ul>
@@ -49,7 +34,7 @@
             </ul> -->
         </div>
         </li>
-        <li><a><i class="far fa-question-circle"></i>Info</a>
+        
         </div>
         </li>
        

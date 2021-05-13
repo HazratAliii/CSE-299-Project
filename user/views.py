@@ -6,17 +6,13 @@ from .forms import tourist_DB
 from .models import Guides, Hotels, Tourists
 # Create your views here.
 def tregister(request):
-    # if request.method == 'POST':
-    #     form = tourist_DB(request.POST)
-    #     if form.is_valid():
-    #         form.save()
-    #         username = form.cleaned_data('name')
-    #         messages.success(request, f'Account created for {username}')
-    #         return redirect('app1-home')
-    # else:
-    #     form = tourist_DB()
-    #     return render(request, 'user/register.html', {'form': form})
-    return render(request, 'user/register.html')
+    email = request.POST['email']
+    password = request.POST['password']
+
+    if Tourists.objects.filter(email = email, password = password):
+        return render(request, "app1/home.html", {})
+    else:
+        return render (request, "user/login.html")
 
 def register_sub(request):
     name = request.POST['name']
@@ -29,16 +25,21 @@ def register_sub(request):
     return render(request, 'app1/home.html', {})
 
 def profile(request):
-    return render(request, "user/profile.html", {})
+    guides = Guides.objects.all()
+    return render(request, "user/profile.html", {"guide": guides})
 
 def login(request):
-    return render(request, 'user/login.html', {})
+    data = Guides.objects.all()
+    return render(request, 'user/login.html', {'data': data})
 
 def login_sub(request):
-    if request.Method == "POST":
-        return render(request, "user/home.html", {})
+    email = request.POST['email']
+    password = request.POST['password']
+
+    if Guides.objects.filter(email = email, password = password):
+        return render(request, "user/profile.html", {})
     else:
-        return render(request, 'user/profile.html', {})
+        return render (request, "user/login.html")
 
 def hotels(request):
     return render(request, 'user/hotels.html')
@@ -50,11 +51,6 @@ def hotel_info_sub(request):
     phone = request.POST['phone']
     description = request.POST['description']
     available = request.POST['available']
-    # print(name)
-    # print(email)
-    # print(phone)
-    # print(description)
-    # print(available)
     hotels = Hotels(name = name, email = email, phone = phone, description = description, available = available)
     hotels.save()
     return render(request, 'app1/home.html')
@@ -91,7 +87,7 @@ def tourist_register_sub(request):
     password2 = request.POST['password2']
     tourist = Tourists(name = name, email = email, phone = phone, password = password, password2 = password2)
     tourist.save()
-    return render(request, 'app1/home.html', {})
+    return render(request, 'user/touristLogin.html', {})
 
 def rangamati(request):
     data = Hotels.objects.all()
@@ -111,7 +107,6 @@ def kuakata(request):
 
 def rangamati_sub(request, pk):
     data = Hotels.objects.get(id = pk)
-    print("khoda", pk)
     context = {'data': data}
     return render(request, 'user/hotelP.html', context)
    

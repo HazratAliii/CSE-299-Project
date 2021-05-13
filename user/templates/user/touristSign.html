@@ -12,14 +12,9 @@
          <input type="text" class="input-box" name = "phone" placeholder="Phone number">
          <input type="password" class="input-box" name = "password" placeholder="Password">
          <input type="password" class="input-box" name = "password2" placeholder="confirm Password">
-         <p><span> <input type="checkbox"></span>i agree to the terms and services</p>
          <button type="submit" class="signup-btn">sign up</button>
-         <!-- <button type="submit"> login</button> -->
          <hr>
-         <p class="or">Or
-         </p>
-         <button type="button" class="login-btn">login with twitter</button>
-         <p>do u have another account? <a href="{url 'app1-home'}">Log in</a></p>
+         <p style="color: black;">do u have another account? <a href="{% url 'user-tourist_login' %}">Log in</a></p>
          
      </form>
       
