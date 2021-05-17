@@ -7,6 +7,7 @@ class Guides(models.Model):
     phone = models.CharField(max_length=100)
     password = models.CharField(max_length=100)
     password2 = models.CharField(max_length=100)
+    hotel = models.CharField(max_length=100)
 
     def __str__(self):
         return self.name
