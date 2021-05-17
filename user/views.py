@@ -127,5 +127,7 @@ def coxsbazar_sub(request, pk):
     context = {'data': data}
     return render(request, 'user/hotelP.html', context)
 
-def guide_info(request):
-    return render(request, "user/guideinfo.html")
+def guide_info(request, name):
+    data = Guides.objects.filter(hotel = name)
+    print(data)
+    return render(request, "user/guideinfo.html", {'cont': data})

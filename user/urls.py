@@ -29,5 +29,5 @@ urlpatterns = [
     path("coxsbazar_sub/<int:pk>", views.coxsbazar_sub, name="user-coxsbazar_sub"),
     path("guide_info/", views.guide_info, name="user-guideinfo"),
     path("register_sub/", views.register_sub, name="user-register_sub"),
-
+    path("guide_info/<str:name>", views.guide_info, name = "user-guide_info")
 ]

@@ -18,7 +18,12 @@
         </div>
     </header>
     <section id="home-info" class="bg-dark">
-        <a href="{% url 'user-guideinfo' %}"><div class="info-img"></div></a>
+        <form action="{% url 'user-guide_info' data.name %}" method="POST">
+            {% csrf_token %}
+            <a href="{% url 'user-guideinfo' %}"><div class="info-img"></div></a>
+            <button type="submit">flskdfj</button>
+        </form>
+        
         <div class="info-content">
             <h2><span class="text-primary">The History</span> Of Our Hotel</h2>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet eaque corrupti sed voluptatibus id. Blanditiis assumenda vero debitis maiores, sapiente excepturi suscipit distinctio! Officiis omnis a, fuga quae inventore sit enim tempore vitae
