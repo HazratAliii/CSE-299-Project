@@ -2,7 +2,6 @@
 {% for i in hotel %}
     
     {% if i.big_city_name == 'Rangamati' %}
-        <!-- <a href="{% url 'user-rangamati_sub' i.id %}">{{i.name}}</a> <br> -->
         <link rel="stylesheet" href="{%static 'app1/Hotelcard.css' %}">
         <div class="card card1">
                <h3><a href="{% url 'user-rangamati_sub' i.id %}">{{i.name}}</a></h3>

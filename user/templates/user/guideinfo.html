@@ -1,3 +1,6 @@
 {% for i in cont %}
-  {{i.name}}
+<div class="card card1">
+       <h3><a href="{% url 'user-kuakata'%}">{{i.name}}</a></h3>
+       <p>{{i.name}} is a beautiful place</p>
+   </div>
 {% endfor %}  
