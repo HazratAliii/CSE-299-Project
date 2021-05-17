@@ -5,7 +5,7 @@ urlpatterns = [
    
     path("", views.tregister, name="user-register"),
     path("profile/", views.profile, name="user-profile"),
-    path("register/", views.register_sub, name="register-sub"),
+    path("register_sub/", views.register_sub, name="register-sub"),
     path("tourist_register_sub/", views.tourist_register_sub, name="tourist-register-sub"),
     path("login/", views.login, name="user-login"),
     path("login_sub/", views.login_sub, name="user-login_sub"),
@@ -27,4 +27,7 @@ urlpatterns = [
     path("kuakata_sub/<int:pk>", views.kuakata_sub, name="user-kuakata_sub"),
     path("sundarban_sub/<int:pk>", views.sundarban_sub, name="user-sundarban_sub"),
     path("coxsbazar_sub/<int:pk>", views.coxsbazar_sub, name="user-coxsbazar_sub"),
+    path("guide_info/", views.guide_info, name="user-guideinfo"),
+    path("register_sub/", views.register_sub, name="user-register_sub"),
+
 ]

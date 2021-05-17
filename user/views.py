@@ -15,13 +15,14 @@ def tregister(request):
         return render (request, "user/login.html")
 
 def register_sub(request):
+
     name = request.POST['name']
     email = request.POST['email']
     phone = request.POST['phone']
     password = request.POST['password']
     password2 = request.POST['password2']
-    guides = Guides(name = name, email = email, phone = phone, password = password, password2 = password2)
-    guides.save()
+    guide = Guides(name = name, email = email, phone = phone, password = password, password2 = password2)
+    guide.save()
     return render(request, 'app1/home.html', {})
 
 def profile(request):
@@ -36,8 +37,9 @@ def login_sub(request):
     email = request.POST['email']
     password = request.POST['password']
 
-    if Guides.objects.filter(email = email, password = password):
-        return render(request, "user/profile.html", {})
+    guide = Guides.objects.filter(email = email, password = password)
+    if guide:
+        return render(request, "user/profile.html", {'guide': guide})
     else:
         return render (request, "user/login.html")
 
@@ -74,7 +76,7 @@ def guide_login(request):
     return render(request, 'user/guideLogin.html')
 
 def guide_signup(request):
-    return render(request, 'user/touristSign.html')
+    return render(request, 'user/guideSign.html')
 
 def tourist_signup(request):
     return render(request, 'user/touristSign.html')
@@ -124,3 +126,6 @@ def coxsbazar_sub(request, pk):
     data = Hotels.objects.get(id = pk)
     context = {'data': data}
     return render(request, 'user/hotelP.html', context)
+
+def guide_info(request):
+    return render(request, "user/guideinfo.html")
