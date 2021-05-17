@@ -1,6 +1,8 @@
+{% load static %}
 {% for i in cont %}
+<link rel="stylesheet" href="{%static 'app1/guidecard.css' %}">
 <div class="card card1">
-       <h3><a href="{% url 'user-kuakata'%}">{{i.name}}</a></h3>
+       <h3><a href="{% url 'user-profile2_sub' i.id %}">{{i.name}}</a></h3>
        <p>{{i.name}} is a beautiful place</p>
    </div>
 {% endfor %}  

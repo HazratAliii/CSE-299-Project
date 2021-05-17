@@ -1,0 +1,32 @@
+.card
+{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-image: url('images/guide.png');
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    
+}
+.card:hover
+{
+    transform: translateY(-10px);
+}
+
+
+h3
+{
+    color: #ffff;
+    text-shadow: 0 0 5px #999;
+}
+p
+{
+    color:#ffff;
+}
+
