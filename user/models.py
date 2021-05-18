@@ -35,5 +35,12 @@ class Tourists(models.Model):
     def __str__(self):
         return self.name
 
+class Review(models.Model):
+    name = models.CharField(max_length=100)
+    review = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.name
+
 
 

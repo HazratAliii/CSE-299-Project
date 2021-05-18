@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.http import HttpResponse
 from .forms import tourist_DB
-from .models import Guides, Hotels, Tourists
+from .models import Guides, Hotels, Tourists, Review
 # Create your views here.
 def tregister(request):
     email = request.POST['email']
@@ -139,3 +139,14 @@ def profile2_sub(request, pk):
     data = Guides.objects.filter(id=pk)
     return render(request, "user/profile2_sub.html", {"guide": data})
 
+def review(request):
+    return render(request, "user/review.html")
+
+def review_sub(request):
+    
+    name = request.POST['name']
+    review = request.POST['review']
+    
+    reviews = Review(name = name, review = review)
+    reviews.save()
+    return render(request, 'app1/home.html')

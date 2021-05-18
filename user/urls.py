@@ -32,5 +32,7 @@ urlpatterns = [
     path("guide_info/<str:name>", views.guide_info, name = "user-guide_info"),
     path("profile2/<int:pk>", views.profile2, name = "user-profile2"),
     path("profile2_sub/<int:pk>", views.profile2_sub, name = "user-profile2_sub"),
+    path("review/", views.review, name = "user-review"),
+    path("review_sub/", views.review_sub, name = "user-review_sub"),
     
 ]

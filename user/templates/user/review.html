@@ -1,0 +1,12 @@
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'app1/review.css' %}">
+<div class="rev">
+    <form action="{% url 'user-review_sub' %}" method="POST">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter hotel name" class="name"><br>
+        <textarea name="review" id="" cols="40" rows="3" placeholder="Description" class="desp"></textarea><br>
+        <button type="submit"> submit </button>
+    </form>
+</div>
