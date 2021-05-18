@@ -31,5 +31,6 @@ urlpatterns = [
     path("register_sub/", views.register_sub, name="user-register_sub"),
     path("guide_info/<str:name>", views.guide_info, name = "user-guide_info"),
     path("profile2/<int:pk>", views.profile2, name = "user-profile2"),
-    path("profile2_sub/<int:pk>", views.profile2_sub, name = "user-profile2_sub")
+    path("profile2_sub/<int:pk>", views.profile2_sub, name = "user-profile2_sub"),
+    
 ]

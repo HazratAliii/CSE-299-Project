@@ -138,3 +138,4 @@ def profile2(request, pk):
 def profile2_sub(request, pk):
     data = Guides.objects.filter(id=pk)
     return render(request, "user/profile2_sub.html", {"guide": data})
+

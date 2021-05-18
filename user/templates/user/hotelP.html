@@ -20,8 +20,8 @@
     <section id="home-info" class="bg-dark">
         <form action="{% url 'user-guide_info' data.name %}" method="POST">
             {% csrf_token %}
-            <a href="{% url 'user-guideinfo' %}"><div class="info-img"></div></a>
-            <button type="submit">Guides</button>
+            <a href="{% url 'user-guideinfo' %}"></a>
+            <button type="submit" class="butt">Guides</button>
         </form>
         
         <div class="info-content">
